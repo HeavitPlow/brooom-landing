@@ -4,9 +4,14 @@ import {
   } from "@solana/wallet-adapter-react";
   import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
   import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
-  import { useMemo } from "react";
+  import { useMemo, ReactNode } from "react";
   
-  export default function SolanaProvider({ children }) {
+  // ✅ props 타입 지정
+  interface SolanaProviderProps {
+    children: ReactNode;
+  }
+  
+  export default function SolanaProvider({ children }: SolanaProviderProps) {
     const endpoint = "https://api.devnet.solana.com";
     const wallets = useMemo(() => [new PhantomWalletAdapter()], []);
   
