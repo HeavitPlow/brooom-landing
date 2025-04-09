@@ -8,13 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@lighthouse-web3/sdk": "^0.3.7",
+    "@metaplex-foundation/js": "^0.20.1",
+    "@solana/wallet-adapter-react": "^0.15.36",
+    "@solana/wallet-adapter-react-ui": "^0.9.36",
+    "@solana/wallet-adapter-wallets": "^0.19.33",
+    "@solana/web3.js": "^1.98.0",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.2"
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
   }
 }
