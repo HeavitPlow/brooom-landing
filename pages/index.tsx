@@ -2,6 +2,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from "next/image"; 
 
 const WalletButton = dynamic(
   async () => (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
@@ -27,7 +28,16 @@ export default function Home() {
       <main className="min-h-screen bg-white text-black px-6 py-10 font-sans">
         {/* Header */}
         <header className="flex justify-between items-center mb-10">
-          <h1 className="text-3xl font-bold">$BROOOM</h1>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/1743488732253.jpg" 
+              alt="$BROOOM Logo"
+              width={50}
+              height={50}
+              className="rounded"
+            />
+            <h1 className="text-3xl font-bold">$BROOOM</h1>
+          </div>
           <WalletButton />
         </header>
 
